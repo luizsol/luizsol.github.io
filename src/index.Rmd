@@ -14,6 +14,13 @@ output:
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
+library("XLConnect")
+library("reshape2")
+library("ggplot2")
+library("scales")
+library("knitr")
+library("timevis")
+
 ```
 
 Seja bem vindo(a) à minha página. 
@@ -30,9 +37,81 @@ Tenho aproximadamente 3 anos de experiência profissional em desenvolvimento de 
 
 Tenho um bom domínio de várias linguagens de programação, mas ultimamente tenho desenvolvido mais código em Python, MatLab e R.
 
-# Formação Acadêmica
-
 # Experiência Profissional
+```{r, echo=FALSE}
+
+html_mux <- '<table><tbody>
+              <tr><td><em>Mux Tecnologia</em></td></tr>
+              <tr><td>Estagiário (Software Development)</td></tr>
+             </tbody></table>'
+
+
+html_cid <- '<table><tbody>
+              <tr><td><em>Control ID</em></td></tr>
+              <tr><td>Eng. Elétrica (cursando)</td></tr>
+             </tbody></table>'
+
+html_torino <- '<table><tbody>
+              <tr><td><em>Politecnico di Torino (Itália)</em></td></tr>
+              <tr><td>Ms. Electronic Engineering (intercâmcio)</td></tr>
+             </tbody></table>'
+
+data <- data.frame(
+  id      = 1:3,
+  content = c(html_mux , html_cid  ,html_torino),
+  start   = c("2011-10-01", "2009-08-01", "2016-09-01"),
+  end     = c("2018-11-31", "2012-07-01", "2017-03-01")
+)
+
+timevis(data) # TODO reduzir altura desse gráfico
+```
+
+# Formação Acadêmica
+```{r, echo=FALSE}
+
+html_unb <- '<table><tbody>
+              <tr><td><em>Univ. de Brasília</em></td></tr>
+              <tr><td>Ciências Econômicas (incompleto)</td></tr>
+             </tbody></table>'
+
+
+html_usp <- '<table><tbody>
+              <tr><td><em>Univ. de São Paulo</em></td></tr>
+              <tr><td>Eng. Elétrica (cursando)</td></tr>
+             </tbody></table>'
+
+html_torino <- '<table><tbody>
+              <tr><td><em>Politecnico di Torino (Itália)</em></td></tr>
+              <tr><td>Ms. Electronic Engineering (intercâmcio)</td></tr>
+             </tbody></table>'
+
+data <- data.frame(
+  id      = 1:3,
+  content = c(html_usp , html_unb  ,html_torino),
+  start   = c("2013-01-01", "2009-08-01", "2016-09-01"),
+  end     = c("2018-12-31", "2012-07-01", "2017-03-01")
+)
+
+timevis(data) # TODO reduzir altura desse gráfico
+```
+
+## USP: Engenharia Elétrica - Ênfase em Sistemas Eletrônicos
+
+* Nível: Graduação
+* Início: 1o semestre de 2013
+* Término (previsão): 2o semestre de 2018
+
+## Politecnico di Torino: Electronics Engineering
+
+* Nível: Mestrado (intercâmbio com aproveitamento de créditos)
+* Início: 2o semestre de 2016
+* Término: 1o semestre de 2017
+
+## UnB: Ciências Econômicas
+
+* Nível: Graduação (incompleto)
+* Início: 2o semestre de 2009
+* Fim: 1o semestre de 2012
 
 # Projetos
 
