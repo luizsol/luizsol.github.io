@@ -37,37 +37,45 @@ Tenho aproximadamente 3 anos de experiência profissional em desenvolvimento de 
 
 Tenho um bom domínio de várias linguagens de programação, mas ultimamente tenho desenvolvido mais código em Python, MatLab e R.
 
-# Experiência Profissional
+Abaixo está uma linha do tempo interativa da minha experiência profissional e acadêmica:
+
 ```{r, echo=FALSE}
+
+html_prof <- '<table><tbody>
+              <tr><td><em>Universidade de Brasília</em></td></tr>
+              <tr><td>Professor part. de Estatística</td></tr>
+             </tbody></table>'
 
 html_mux <- '<table><tbody>
               <tr><td><em>Mux Tecnologia</em></td></tr>
-              <tr><td>Estagiário (Software Development)</td></tr>
+              <tr><td>Software Development</td></tr>
              </tbody></table>'
 
 
 html_cid <- '<table><tbody>
               <tr><td><em>Control ID</em></td></tr>
-              <tr><td>Eng. Elétrica (cursando)</td></tr>
+              <tr><td>Firmware/Software Developer</td></tr>
              </tbody></table>'
 
-html_torino <- '<table><tbody>
-              <tr><td><em>Politecnico di Torino (Itália)</em></td></tr>
-              <tr><td>Ms. Electronic Engineering (intercâmcio)</td></tr>
+html_monit <- '<table><tbody>
+              <tr><td><em>USP</em></td></tr>
+              <tr><td>Monitoria Desenv. Integrado de Prod.</td></tr>
              </tbody></table>'
 
-data <- data.frame(
-  id      = 1:3,
-  content = c(html_mux , html_cid  ,html_torino),
-  start   = c("2011-10-01", "2009-08-01", "2016-09-01"),
-  end     = c("2018-11-31", "2012-07-01", "2017-03-01")
-)
+html_shlck <- '<table><tbody>
+              <tr><td><em>Sherlock (Itália)</em></td></tr>
+              <tr><td>Hardware/Firmware Developer</td></tr>
+             </tbody></table>'
 
-timevis(data) # TODO reduzir altura desse gráfico
-```
+html_loop <- '<table><tbody>
+              <tr><td><em>Loop CE</em></td></tr>
+              <tr><td>Hardware Developer</td></tr>
+             </tbody></table>'
 
-# Formação Acadêmica
-```{r, echo=FALSE}
+html_visia <- '<table><tbody>
+              <tr><td><em>Visia Investimentos</em></td></tr>
+              <tr><td>Modelagem Financeira, Tecnologia, Software Dev.</td></tr>
+             </tbody></table>'
 
 html_unb <- '<table><tbody>
               <tr><td><em>Univ. de Brasília</em></td></tr>
@@ -85,15 +93,23 @@ html_torino <- '<table><tbody>
               <tr><td>Ms. Electronic Engineering (intercâmcio)</td></tr>
              </tbody></table>'
 
-data <- data.frame(
-  id      = 1:3,
-  content = c(html_usp , html_unb  ,html_torino),
-  start   = c("2013-01-01", "2009-08-01", "2016-09-01"),
-  end     = c("2018-12-31", "2012-07-01", "2017-03-01")
-)
 
-timevis(data) # TODO reduzir altura desse gráfico
+timevis( data.frame(
+  type    = c("range",      "range",      "range",      "range",      "range",      "range",      "range",      "range",      "range",      "range"),
+  content = c(html_prof,    html_mux,     html_cid,     html_monit,   html_shlck,   html_loop,    html_visia,   html_usp,     html_unb,     html_torino),
+  start   = c("2010-08-01", "2011-10-01", "2013-09-01", "2016-03-01", "2016-12-01", "2016-07-01", "2017-05-30", "2013-01-01", "2009-08-01", "2016-09-01"),
+  end     = c("2012-07-30", "2012-11-30", "2014-07-30", "2016-08-30", "2017-02-10", "2017-04-30", "2018-05-30", "2018-12-31", "2012-07-01", "2017-03-01"),
+  group   = c(1           , 1           , 1           , 1           , 1           , 1           , 1           , 2           , 2           ,2)),
+  groups = data.frame(id = 1:2, content = c("Profissional", "Educação")
+)) %>% setGroups(data.frame(id = 1:2, content = c("Profissional", "Educação")))
+
+
 ```
+
+# Experiência Profissional
+
+# Formação Acadêmica
+
 
 ## USP: Engenharia Elétrica - Ênfase em Sistemas Eletrônicos
 
