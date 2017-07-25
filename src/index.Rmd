@@ -1,0 +1,39 @@
+---
+title: "Olá"
+# author: "Luiz Sol"
+# date: "24/07/2017"
+output:
+  html_document:
+    toc: true
+    toc_depth: 2
+    toc_float:
+      collapsed: false
+    theme: paper
+    highlight: espresso
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+Seja bem vindo(a) à minha página. 
+
+Meu nome é Luiz Eduardo Sol e essa página é uma breve descrição sobre minha vida acadêmica e profissional.
+
+Caso se interesse em saber mais, fique à vontade para acessar meu [LinkedIn](www.linkedin.com/in/luizsol) ou meu [Blog](http://luizsol.com/).
+
+# Resumo
+
+Atualmente sou estudante de Engenharia Elétrica com Ênfase em Sistêmas Eletrônicos na [Universidade de São Paulo](http://www.usp.br/) e trabalho na área de Tecnologia da Asset & Wealth Management [Visia Investimentos](https://www.visiainvestimentos.com.br/).
+
+Tenho aproximadamente 3 anos de experiência profissional em desenvolvimento de Software e 4 em desenvolvimento de Hardware e de Sistemas Embarcados.
+
+Tenho um bom domínio de várias linguagens de programação, mas ultimamente tenho desenvolvido mais código em Python, MatLab e R.
+
+# Formação Acadêmica
+
+# Experiência Profissional
+
+# Projetos
+
+# Outras informações
