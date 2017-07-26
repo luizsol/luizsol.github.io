@@ -41,6 +41,8 @@ Abaixo está uma linha do tempo interativa da minha experiência profissional e 
 
 ```{r, echo=FALSE}
 
+# Histórico profissional
+
 html_prof <- '<table><tbody>
               <tr><td><em>Universidade de Brasília</em></td></tr>
               <tr><td>Professor part. de Estatística</td></tr>
@@ -77,6 +79,8 @@ html_visia <- '<table><tbody>
               <tr><td>Modelagem Financeira, Tecnologia, Software Dev.</td></tr>
              </tbody></table>'
 
+# Histórico acadêmico
+
 html_unb <- '<table><tbody>
               <tr><td><em>Univ. de Brasília</em></td></tr>
               <tr><td>Ciências Econômicas (incompleto)</td></tr>
@@ -89,19 +93,42 @@ html_usp <- '<table><tbody>
              </tbody></table>'
 
 html_torino <- '<table><tbody>
-              <tr><td><em>Politecnico di Torino (Itália)</em></td></tr>
-              <tr><td>Ms. Electronic Engineering (intercâmcio)</td></tr>
-             </tbody></table>'
+                  <tr><td><em>Politecnico di Torino (Itália)</em></td></tr>
+                  <tr><td>Ms. Electronic Engineering (intercâmcio)</td></tr>
+                </tbody></table>'
+
+# Histórico projetos
+
+html_sugar <- '<table><tbody>
+                  <tr><td><em> USP, Trinity College (Irlanda), Standord University (EUA) </em></td></tr>
+                  <tr><td> Socially Intelligent Interface (Sugar Network) </td></tr>
+                </tbody></table>'
+
+html_einstein <- '<table><tbody>
+                  <tr><td><em> USP, Hospital Israelita Albert Einstein </em></td></tr>
+                  <tr><td> Sistema de Controle de Gases Hospitalares </td></tr>
+                </tbody></table>'
+
+html_mqe <- '<table><tbody>
+                  <tr><td><em> USP </em></td></tr>
+                  <tr><td> Medidor Remoto de Potência e Qualidade de Energia </td></tr>
+                </tbody></table>'
 
 
 timevis( data.frame(
-  type    = c("range",      "range",      "range",      "range",      "range",      "range",      "range",      "range",      "range",      "range"),
-  content = c(html_prof,    html_mux,     html_cid,     html_monit,   html_shlck,   html_loop,    html_visia,   html_usp,     html_unb,     html_torino),
-  start   = c("2010-08-01", "2011-10-01", "2013-09-01", "2016-03-01", "2016-12-01", "2016-07-01", "2017-05-30", "2013-01-01", "2009-08-01", "2016-09-01"),
-  end     = c("2012-07-30", "2012-11-30", "2014-07-30", "2016-08-30", "2017-02-10", "2017-04-30", "2018-05-30", "2018-12-31", "2012-07-01", "2017-03-01"),
-  group   = c(1           , 1           , 1           , 1           , 1           , 1           , 1           , 2           , 2           ,2)),
-  groups = data.frame(id = 1:2, content = c("Profissional", "Educação")
-)) %>% setGroups(data.frame(id = 1:2, content = c("Profissional", "Educação")))
+  content = c(html_prof,    html_mux,     html_cid,     html_monit,   html_shlck,   html_loop,    html_visia,   html_usp,     
+              html_unb,      html_torino, html_sugar,   html_einstein, html_mqe   ),
+  start   = c("2010-08-01", "2011-10-01", "2013-09-01", "2016-03-01", "2016-12-01", "2016-07-01", "2017-05-30", "2013-01-01",
+              "2009-08-01", "2016-09-01", "2015-07-01", "2014-08-01", "2014-08-01"),
+  end     = c("2012-07-30", "2012-11-30", "2014-07-30", "2016-08-30", "2017-02-10", "2017-04-30", "2018-05-30", "2018-12-31",
+              "2012-07-01", "2017-03-01", "2016-06-01", "2015-11-01", "2014-12-01"),
+  group   = c(1           , 1           , 1           , 1           , 1           , 1           , 1           , 2           , 
+              2           , 2           , 3           , 3           , 3),
+  style   = c(NA          , NA          , NA          , NA          , NA          , NA          , NA          , "background-color: #F8F8FF;",
+              "background-color: #F8F8FF;","background-color: #F8F8FF;","background-color: 	#90EE90;","background-color: 	#90EE90;","background-color: 	#90EE90;")),
+  groups = data.frame(id = 1:3, content = c("Profissional", "Educação", "Projetos")),
+  width = NULL, height = 520
+) %>% setGroups(data.frame(id = 1:3, content = c("Profissional", "Educação", "Projetos")))
 
 
 ```
